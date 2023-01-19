@@ -8,9 +8,9 @@ euro = real / 5.57
 iene = real / 0.040
 if converter == 'dólar':
     print('US${:.2f}'.format(dólar))
-if converter == 'euro':
+elif converter == 'euro':
     print('£{:.2f}'.format(euro))
-if converter == 'iene':
+elif converter == 'iene':
     print('¥{:.2f}'.format(iene))
 else:
     print('Moeda não identificada')
