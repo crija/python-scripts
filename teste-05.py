@@ -1,7 +1,9 @@
-a = 5
-b = 8
+#Faça um sintema que some dois números aleatórios e mostre se é < ou > que 50:
+
+a = int(input('Digite um número: '))
+b = int(input('Digite outro número: '))
 soma = a + b
-if soma == 8:
-    print('A soma é 8!')
+if soma < 50:
+    print('A soma de {} + {} é menor que 50!'.format(a, b))
 else:
-    print('A soma não é 8!')
+    print('A soma de {} + {} é maior que 50!'.format(a, b))

@@ -7,6 +7,8 @@
 
 num1 = float(input('Digite uma nota: '))
 num2 = float(input('Digite outra nota: '))
+
 s = num1 + num2
 m = num1 / num2
+
 print('A média de {} e {} vale {}'.format(num1, num2, m))
