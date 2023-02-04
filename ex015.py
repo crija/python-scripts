@@ -1,4 +1,4 @@
-#Faça um algoritimo que leia o preço de um produto e mostre seu novo preço, com 5% de desconto:
+ #Faça um algoritimo que leia o preço de um produto e mostre seu novo preço, com 5% de desconto:
 
 print('Parabéns, você acaba de ganhar 70% de desconto em qualquer produto da lista abaixo!')
 print('\n')
