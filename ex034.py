@@ -3,10 +3,10 @@
 
 frase = str(input('Digite uma frase: '))
 
-nv = 0
+ndv = 0
 
 for letter in frase :
     if letter == 'a' or letter == 'A' :
-        nv = nv + 1
+        ndv = ndv + 1
 
-print('A letra A repete {}:'.format(nv))
+print('A letra A repete {}:'.format(ndv))
