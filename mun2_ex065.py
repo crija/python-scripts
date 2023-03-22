@@ -12,32 +12,50 @@ Patanol
 ''')
 print('¨'* 15)
 
-remedio = str(input('Qual das opções você deseja? '))
+remedio = str(input('Qual das opções você deseja? ')).lower()
 
-nome = str(input('Qual seu nome? '))
+if remedio == (''):
 
-idade = int(input('Quantos anos você tem? '))
+    print('preencha o campo a cima:')
 
-# especifique se o remedio escolhido é recomendado para a idade dele ou nao,
+elif remedio == 'tilenol' or remedio == 'patanol':
 
-if remedio == 'Tilenol' or remedio == 'Patanol':
+    nome = str(input('Qual seu nome? '))
 
-    if idade < 18:
+    if nome == (''):
 
-        print('{} NÃO é recomendado para menor de idade.'.format(remedio))
+        print('Nome é obrigatório:')
 
-# se o usuario for menor de idade nao autorize  a compra
+    else:
 
-        print('A venda de {} não é autorizada para menores de 18 anos'.format(remedio))
-        print('Compareça a loja mais próxima com um adulto responsável para a compra.')
+        idade = int(input('Quantos anos você tem? '))
 
-    elif idade >= 18:
+        if idade == (''):
 
-        print('CARREGANDO INFORMAÇÕES...')
+            print('Idade é obrigatório:')
 
-        time.sleep(2)
+        elif idade < 18:
 
-        print('''
+# especifique se o remedio escolhido é recomendado para a idade do cliente ou nao,
+
+            print('{} NÃO é recomendado para menor de idade.'.format(remedio))
+
+            print('A venda de {} não é autorizada para menores de 18 anos'.format(remedio))
+
+            print('Compareça a loja mais próxima com um adulto responsável para a compra.')
+
+        else:
+
+            if idade >= 18:
+
+                print('CARREGANDO INFORMAÇÕES...')
+
+                time.sleep(2)
+
+                print('''
 Nome: {}
 Idade: {}
 Produto: {}'''.format(nome, idade, remedio))
+
+else:
+    print('erro')
