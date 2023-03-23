@@ -35,3 +35,13 @@ for c in range(1, 5):
         soma = soma + 1
         cont = cont + n
 print('A soma dos {} números PARES é {}.'.format(cont, soma))'''
+
+'''nome1 = str(input('Qual é seu nome? '))
+print('Adivinhe meu nome:')
+for c in ['carla']:
+    nome2 = str(input('- '))
+    if nome2 == c:
+        print('Você acertou!')
+        print('Prazer em te conhecer {}!'.format(nome1))
+    else:
+        print('Você errou!')'''
