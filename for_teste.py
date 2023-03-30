@@ -45,3 +45,13 @@ for c in ['carla']:
         print('Prazer em te conhecer {}!'.format(nome1))
     else:
         print('Você errou!')'''
+
+
+'''soma = 0
+cont = 0
+for c in range(1, 5):
+    n = int(input('Digite um número:'))
+    if n % 2 == 1:
+         soma = soma + 1
+         cont = cont + n
+print('Dos {} números que você digitou {} são impares'.format(c, soma))'''
