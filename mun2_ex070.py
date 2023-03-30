@@ -5,12 +5,13 @@
 #[4] novos números
 #[5] sair do programa
 #Seu programa deverá realizar a operação solicitada em cada caso:
+from time import sleep
+
+n1 = int(input('Digite um valor: '))
+n2 = int(input('Digite um valor: '))
 
 e = 1
 while e != 5:
-
-    n1 = int(input('Digite um valor: '))
-    n2 = int(input('Digite um valor: '))
 
     print('''
     [1] somar
@@ -22,14 +23,15 @@ while e != 5:
 
     print('Digite 1, 2, 3, 4, ou 5!')
     e = int(input('-'))
+    sleep(2)
 
     if e == 1:
         s = n1 + n2
-        print('A soma dos números é {}.'.format(s))
+        print('{} + {} = {}.'.format(n1, n2, s))
     elif e == 2:
 
         m = n1 * n2
-        print('O resultado é {}.'.format(m))
+        print('{} x {} = {}.'.format(n1, n2, m))
 
     elif e == 3:
         if n1 < n2:
@@ -40,6 +42,7 @@ while e != 5:
             print('{} e {} tem valores iguais.'.format(n1, n2))
 
     elif e == 4:
+        print('>>>Digite os novos números:')
         novnum1 = int(input('Digite outro número: '))
         novnum2 = int(input('Digite mais um número: '))
 
