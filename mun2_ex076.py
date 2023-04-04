@@ -12,6 +12,9 @@ gasto = 0
 maior1000 = 0
 menornome = ''
 maiornome = ''
+listaprodutos = ''
+valores = 0
+lista = []
 
 print('-='*10)
 print('LOJA GASTE MENOS')
@@ -22,6 +25,8 @@ while c != 'N':
     nome = str(input('Digite o nome do produto: '))
     preço = int(input('Digite o preço do produto: '))
     c = str(input('Deseja continuar? [S/N]: ')).upper()
+
+    lista.append(nome)
 
     quantidade += 1
     gasto += preço
@@ -44,10 +49,21 @@ while c != 'N':
     if c == 'N':
         print('carregando...')
 
+
+
 print('-------------- PRODUTOS ADICIONADOS A SUA SACOLA ---------------')
 sleep(3)
 
-print('Você adicionou {} produto na sua sacola com total de R${}'.format(quantidade, gasto))
+print('Você adicionou {} produto na sua sacola com total de R${}.'.format(quantidade, gasto))
 print('O produto de maior valor é {} com o valor de R${}.'.format(maiornome, maior))
 print('O produto de menor valor é {} com o valor de R${}.'.format(menornome, menor))
 print('Você adicionou {} produtos maiores de R$1000.'.format(maior1000))
+
+print('CARRINHO:')
+
+print('-'*15)
+
+for lista in lista:
+    print(lista)
+
+print('-'*15)
