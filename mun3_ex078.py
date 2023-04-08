@@ -11,5 +11,5 @@ while True:
     if num < 10:
         break
     print('Tente novamente')
-
+    
 print(f'Você digitou o número {extenso[num]}')
