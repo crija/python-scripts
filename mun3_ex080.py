@@ -3,8 +3,7 @@
 #Quantas vezes aperece o valor 9;
 #Em que posição foi digitado o primeiro valor 3;
 #Quais foram os números pates.
-cont = 0
-soma = 0
+
 
 
 n1 = int(input('Digite um número: '))
@@ -18,7 +17,10 @@ print(f'Os números digitados foram{lista}')
 
 print(f'O número 9 aparece {lista.count(9)} vez(es)')
 
-print(f'O primeiro valor 3 digitado está na posição {(lista.index(3)+1)}')
+if 3 in lista:
+    print(f'O primeiro valor 3 digitado está na posição {(lista.index(3)+1)}')
+else:
+    print('Número 3 não foi digitado')
 
 print('Os números pares são ', end='')
 
