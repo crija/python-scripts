@@ -22,8 +22,8 @@ print('-='*10)
 
 while c != 'N':
 
-    nome = str(input('Digite o nome do produto: '))
-    preço = int(input('Digite o preço do produto: '))
+    nome = str(input('Digite o nome e o valor do produto: '))
+    preço = float(input('Digite o preço do produto: '))
     c = str(input('Deseja continuar? [S/N]: ')).upper()
 
     lista.append(nome)
