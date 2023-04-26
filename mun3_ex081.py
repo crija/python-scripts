@@ -24,18 +24,20 @@ while resposta != 'N':
     cont += 1
 
 print('')
-print('LISTAGEM DE PREÇOS')
+titulo = 'LISTAGEM DE PREÇOS'
+print(titulo.center(30, ))
 print('_'*30)
 print('carregando...')
 sleep(3)
+print(f'Você adicionou {cont} produto(s) na sacola')
+
 
 for item in lista:
 
     produto = item[0]
     valor = item[1]
 
-    print(f'{produto}.............{valor}')
-print(f'Total {soma}')
-print(f'Você adicionou {cont} produtos na sacola')
+    print(f'{produto:.<30} R$ {valor}')
+print(f'Total R${soma}')
 
 print('_'*30)
