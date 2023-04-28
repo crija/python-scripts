@@ -1,8 +1,13 @@
 #Criar uma lista de tarefas;
 tarefas = []
+tar = ''
 
-for cont in range(1, 4):
+while tar != 'nao':
     tarefas.append(str(input('Digite a tarefa: ')))
-for c, t in enumerate(tarefas):
-    print(f'Tarefa n{c}: {t}')
-print('Essas são as tarefas do dia')
+    tar = str(input('Deseja adicionar mais alguma tarefa? ')).lower()
+    if tar != 'sim':
+        for c, t in enumerate(tarefas):
+            print(f'Tarefa n{c}: {t}')
+        print('Essas são as tarefas do dia')
+    elif tar == 'nao':
+        break
