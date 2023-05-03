@@ -3,13 +3,27 @@
 #Caso o número já exista lá dentro, ele não será adicionado;
 #No final, serão exibidos todos os valores únicos digitados, em ordem crescente.
 
+from time import sleep
+
 esc = ''
 lista = []
 
-while esc != 'nao':
-    lista.append(int(input('Digite um número: ')))
-    esc = str(input('Deseja acrescentar mais um número na sua lista? '))
+print('-'*70)
+print('CRIE UMA LISTA COM OS NÚMEROS DA SUA ESCOLHA'.center(70,))
+print('-'*70)
 
-    if esc != 'nao':
+while esc != 'n':
+    num = int(input('Digite um número: '))
+    esc = str(input('Deseja acrescentar mais um número na sua lista? [S/N] ')).lower()
+
+    if esc != 'n':
         print('*')
-print(lista)
+
+    lista.append(num)
+    lista.sort()
+    lista_sem_repetiçao = list(set(lista))
+
+print('carregando...')
+sleep(3)
+
+print(f'Sua lista de números está pronta: {lista_sem_repetiçao}')
