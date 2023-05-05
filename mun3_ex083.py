@@ -18,6 +18,4 @@ for c in range(0, 5):
                 break
             pos += 1
 
-print('-'*40)
-
 print(f'Os números digitados foram {lista}')
