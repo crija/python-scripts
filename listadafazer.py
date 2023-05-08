@@ -3,20 +3,19 @@ tarefas = []
 tar = ''
 res = ''
 eliminar = ''
+rem = ''
 
-while tar != 'nao':
+while tar != 'n':
     tarefas.append(str(input('Digite a tarefa: ')))
-    tar = str(input('Deseja adicionar mais alguma tarefa? ')).lower()
+    tar = str(input('Deseja adicionar mais alguma tarefa?[s/n] ')).lower()[0]
 
-    if tar != 'sim':
+    if tar != 's':
         for c, t in enumerate(tarefas):
             print(f'Tarefa n{c}: {t}')
         print('Essas são as tarefas do dia')
-
-    '''    while eliminar != 'nao':
-            for d, r in enumerate(tarefas):
-                eliminar = str(input('Deseja eliminar alguma tarefa? '))
-                if eliminar != 'nao':
-                    nome = str(input('Digite o nome da tarefa: '))
-                    tarefas.pop()
-                    print(f'Tarefa n{d}: {r} - eliminada')   '''
+        rem = str(input('Deseja remover alguma tarefa?[s/n] '))
+        if rem == 's':
+            elemento = int(input('Digite o número da tarefa: '))
+            del tarefas[elemento]
+            for i, o in enumerate(tarefas):
+                print(f'Tarefa n{i}: {o}')
