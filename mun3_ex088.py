@@ -7,10 +7,12 @@ v = 0
 
 for v in range(0, 7):
     v = int(input(f'Digite o {v}o número: '))
+    print('*')
     if v % 2 == 0:
         val[0].append(v)
     else:
         val[1].append(v)
+
 val[0].sort()
 val[1].sort()
 
