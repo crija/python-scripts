@@ -56,7 +56,7 @@ pessoas['peso'] = 57.5
 brasil = []
 estado1 = {'uf': 'Rio de Janeiro', 'sigla': 'RJ'}
 estado2 = {'uf': 'São Paulo', 'sigla': 'SP'}
-brasil.apend(estado1)
+brasil.append(estado1)
 brasil.append(estado2)
 print(brasil)
 #Adicionar dois dicionários dentro de uma lista
