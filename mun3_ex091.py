@@ -9,9 +9,10 @@ aluno['nome']= str(input('Nome: '))
 aluno['media']= float(input(f'Média de {aluno["nome"]}: '))
 
 if aluno['media'] < 6:
-    print(f'Aluno {aluno["nome"]} está reprovado')
-    print(f'Média: {aluno["media"]}')
+    aluno['situação'] = 'Reprovado'
 
 else:
-    print(f'Aluno(a) {aluno["nome"]} está aprovado(a)')
-    print(f'Média: {aluno["media"]}')
+    aluno['situação'] = 'Aprovado'
+
+for k, v in aluno.items():
+    print(f'{k} é igual a {v}')
