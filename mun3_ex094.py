@@ -5,6 +5,7 @@
 #Calcule e acrescente, além da idade, com quantos anos a pessoa vai se aposentar.(aposentadoria > 35 anos de contribuição).
 
 import datetime
+from time import sleep
 
 worker = {}
 
@@ -21,11 +22,14 @@ if worker['Número_Carteira'] != 0:
     idade_atual = year - ano
     worker['Idade'] = idade_atual
     
-    worker['Ano_Contratacao'] = int(input('Year if hire: '))
+    worker['Ano_Contratação'] = int(input('Year if hire: '))
     worker['Salário'] = int(input('Wage: '))
-    aposentadoria = worker['Ano_Contratacao'] + 35
+    aposentadoria = worker['Ano_Contratação'] + 35
     worker['Aposentar'] = aposentadoria
 
+    print('carregando...')
+    sleep(2)
+    
     print('-'*25)
     for v, k in worker.items():
         print(f'{v}: {k}')
