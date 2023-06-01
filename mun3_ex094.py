@@ -27,10 +27,10 @@ if worker['Número_Carteira'] != 0:
     aposentadoria = worker['Ano_Contratação'] + 35
     worker['Aposentar'] = aposentadoria
 
-    print('carregando...')
-    sleep(2)
-    
-    print('-'*25)
-    for v, k in worker.items():
-        print(f'{v}: {k}')
-    print('-'*25)
+print('carregando...')
+sleep(2)
+
+print('-'*25)
+for v, k in worker.items():
+    print(f'{v}: {k}')
+print('-'*25)
