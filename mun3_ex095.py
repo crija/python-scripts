@@ -37,7 +37,7 @@ print('*'*25)
 print(f"{aproveitamento['Nome']} jogou {aproveitamento['Jogos']} partidas.")
 
 for i, v in enumerate(lista):
-    print(f'Na partida {i+1} {aproveitamento["Nome"]} fez {v} gols.')
+    print(f'  => Na partida {i+1} {aproveitamento["Nome"]} fez {v} gols.')
 
+print(f'Foi um total de {soma} gols')
 
-    
