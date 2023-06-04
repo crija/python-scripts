@@ -12,6 +12,7 @@ aproveitamento = {}
 soma = 0 
 tot = 0
 lista = []
+final = {}
 
 aproveitamento['Nome'] = str(input('Nome do jogador: '))
 aproveitamento['Jogos'] = int(input(f"Quantas partidas {aproveitamento['Nome']} jogou? "))
@@ -35,6 +36,8 @@ print('*'*25)
 
 print(f"{aproveitamento['Nome']} jogou {aproveitamento['Jogos']} partidas.")
 
-for c in range(0, aproveitamento['Jogos']):
-    print(f'Na partida {c+1}: ')
+for i, v in enumerate(lista):
+    print(f'Na partida {i+1} {aproveitamento["Nome"]} fez {v} gols.')
 
+
+    
