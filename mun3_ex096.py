@@ -9,6 +9,8 @@
 # - Uma lista com todas as mulheres;
 # - Uma lista com todas as pessoas com idade acima da média.
 
+from time import sleep
+
 pessoas = dict()
 lista = list()
 res = ''
@@ -34,7 +36,9 @@ while True:
     lista.append(pessoas)
 
     while True:
+        print('')
         res = str(input('Deseja continuar [s/n]: ')).lower()[0]
+        print('')
 
         if res in 'sn':
             break
@@ -42,8 +46,11 @@ while True:
     if res == 'n':
         break
         
+sleep(2)
+
 print('_'*45)
-print(f'O total é de: {num_pes} pessoas')
-print(f'A média de idade é de: {med_idade}')
-print(f'Nome das mulheres cadastradas: {lista_mulheres}')
+print('RESULTADO:')
+print(f'  => O total é de: {num_pes} pessoas')
+print(f'  => A média de idade é de: {med_idade}')
+print(f'  => Nome das mulheres cadastradas: {lista_mulheres}')
 print('_'*45)
