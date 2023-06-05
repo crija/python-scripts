@@ -6,38 +6,42 @@
 
 #No final, tudo isso será guardado em um dicionário, incluindo o total de gols feitos durante o campeonato.
 
+#APRIMORAR DESAFIO:
+
+#=>Para que funciona com vários jogadores;
+#=>com um sistema de validação de detalhes do aproveitamento de cada jogador.
+
 from time import sleep
 
-aproveitamento = {}
+res = ''
 soma = 0 
 tot = 0
 lista = []
 final = {}
+nomes = {}
+jogos = {}
+gols = {}
+lista2 = []
 
-aproveitamento['Nome'] = str(input('Nome do jogador: '))
-aproveitamento['Jogos'] = int(input(f"Quantas partidas {aproveitamento['Nome']} jogou? "))
+while True:
+    nomes['Nome'] = str(input('Nome do jogador: '))
+    jogos['Jogos'] = int(input(f"Quantas partidas {nomes['Nome']} jogou? "))
+    for p in range(0, jogos['Jogos']):
+        gols['Gols'] = int(input(f'Quantos gols na partida {p + 1}?'))
+    
+    res = str(input('deseja continuar? '))
+    if res == 'n':
+        break
+        
+lista2.append(nomes)
+print(nomes)
 
-for c in range(0, aproveitamento['Jogos']):
-    quantidade_gols = int(input(f'Quantidade de gols na partida {c+1}: '))
-    soma = soma + quantidade_gols
-    aproveitamento['Total_gols'] = soma
 
-    lista.append(quantidade_gols)
-aproveitamento['Gols'] = lista
 
-print('Aguarde...')
-print('')
-sleep(3)
-print('RESULTADO:')
-print('*'*25)
-for k, i in aproveitamento.items():
-    print(f'{k}: {i}')
-print('*'*25)
 
-print(f"{aproveitamento['Nome']} jogou {aproveitamento['Jogos']} partidas.")
 
-for i, v in enumerate(lista):
-    print(f'  => Na partida {i+1} {aproveitamento["Nome"]} fez {v} gols.')
 
-print(f'Foi um total de {soma} gols')
+
+
+
 
