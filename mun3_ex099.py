@@ -7,15 +7,26 @@
 
 from time import sleep
 
-def contador(a, b, c):
-    print('-' * 20)
-    print(f'Inicio:{a}, Fim:{b}, Passo:{c}')
-    for n in range(a, b, c):
-        print(n)
-        sleep(1)
-    print('-' * 20)
+def contador(i, f, p):
+    print(f'Contagem de {i}, até {f} de {p} em {p}')
+    
+    if i < f:
+        cont = i
+        while cont >= f:
+            print(f'{cont} ', end='', flush=True)
+            sleep(0.5)
+            cont += p
+        print('FIM!')
+    else:
+        cont = i
+        while cont >= f:
+            print(f'{cont} ', end='', flush=True)
+            sleep(0.5)
+            cont -= p
+        print('FIM!')
 
-contador(1, 11, 1)
-contador(10, -1, -2)
+#programa principal
+contador(1, 10, 1)
+contador(10, 0, 2)
 
 
