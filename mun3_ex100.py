@@ -4,19 +4,25 @@
 
 from time import sleep
 
+lista = []
 
 def maior(*num):
-    print(f'Os números são: {num}')
-    print(f'Foram digitados:', end = " ")
-    print(len(num), end = ' ')
-    print('números \n')
-    
-
+    print()
+    print('RESULTADO...\n')
     sleep(2)
+    for n in num:
+        print(f'Os números são: {lista}')
+        print(f'Foram digitados:', end = " ")
+        print(len(lista), end = ' ')
+        print('números \n')
     
 #programa principal
-maior(2, 4, 7, 1)
-maior(3, 9)
-maior(2)
-maior(8, 0, 5)
+while True:
+    v = int(input('Digite um número: '))
+    res = int(input('Digite 999 para parar: '))
+    lista.append(v)
+    if res == 999:
+        break
+
+maior(lista)
 
