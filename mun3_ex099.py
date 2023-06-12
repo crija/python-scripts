@@ -6,13 +6,13 @@
 # Uma contagem personalizada pelo usuário.
 
 from time import sleep
-
+lista = []
 def contador(i, f, p):
     print(f'Contagem de {i}, até {f} de {p} em {p}')
     
     if i < f:
         cont = i
-        while cont >= f:
+        while cont <= f:
             print(f'{cont} ', end='', flush=True)
             sleep(0.5)
             cont += p
@@ -28,5 +28,9 @@ def contador(i, f, p):
 #programa principal
 contador(1, 10, 1)
 contador(10, 0, 2)
+print('Agora é com você!')
+ini= int(input('Digite o inicio: '))
+fim = int(input('Digite o fim: '))
+pas = int(input('Digite o Passo: '))
 
-
+contador(ini, fim, pas)
