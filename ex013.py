@@ -9,7 +9,6 @@ print()
 
 nome = input('Nome do produto desejado: ')
 valor = float(input('Valor: '))
-#valor_novo = valor - (valor * 5 / 100)
 
 print(f'Valor a vista: R$ {valor - (valor * 5 / 100)}')
 print('')
