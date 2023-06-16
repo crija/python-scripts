@@ -1,17 +1,27 @@
 #Crie um programa que calcule o aumento e desconto de um valor (em porcentagem):
 
-print('NO PAGAMENTO A VISTA VOCÊ GANHA 5% DE DESCONTO:')
+print()
 
-produto = float(input('Digite o valor do produto desejado para fazermos a simulação: R$'))
-novo = produto - (produto * 5 / 100)
+titulo = 'NO PAGAMENTO A VISTA VOCÊ GANHA 5% DE DESCONTO:'
 
-print('No pagamento a vista você vai pagar apenas R${:.2f}.'.format(novo))
+print(titulo.center(70))
+print()
+
+nome = input('Nome do produto desejado: ')
+valor = float(input('Valor: '))
+#valor_novo = valor - (valor * 5 / 100)
+
+print(f'Valor a vista: R$ {valor - (valor * 5 / 100)}')
 print('')
-print('________________________________________________')
+print('-' *70)
 print('')
-print('PARCELANDO EM ATÉ 10* TEM ACRÉSCIMO DE 10% SOBRE O VALOR ATUAL:')
+print('PARCELANDO EM 10x TEM ACRÉSCIMO DE 10% SOBRE O VALOR ATUAL:')
 
-produto = float(input('Digite o valor do produto desejado para fazermos a simulação: R$'))
-novo = produto + (produto * 10 / 100)
+parcelar = str(input('Você deseja pagar em 10x? '))
+if parcelar == 'sim':    
 
-print('Parcelando em até 10* você irá pagar R${:.2f}:'.format(novo))
+    print(f'Parcelando em até 10x você irá pagar: R$ {valor + (valor * 10 / 100)}')
+    
+else:
+    print(f'{nome}: {valor - (valor * 5 / 100)}')
+print('-' *70)
