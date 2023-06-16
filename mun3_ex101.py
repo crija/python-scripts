@@ -7,15 +7,19 @@
 #Aparecer todo o resultado, e se o usuário está apto para o aluguel.
 
 
+
+from time import sleep
+
 #dicionários, título e subtítulo.
 necessidades = {}
 cadastro = {}
 titulo = 'ALUGUEL DE CARROS DA SUA PREFERÊNCIA!'
-cadastro2 = 'CADASTRE-SE'
+subtitulo = 'CADASTRE-SE'
 
 #parte 1 do projeto: título centralizado.
 print('')
 print(titulo.center(50))
+
 
 #laço de repetição comparando suas chaves do dicinário 'necessarios'.
 while ['dia_devolução'] < ['dia_retirada']:
@@ -62,13 +66,11 @@ while ['dia_devolução'] < ['dia_retirada']:
         necessidades['cor'] = str(input('Cor de preferência: '))
 
         print('_' * 50)
-
-#printar o dicionário 'necessidades' com todas as informações do pedidas para o usuário (as perguntas obrigatórias), as perguntas que o usuário escolher não responder estarão em branco, mostrando somente a chave.
-        print(necessidades)
         print()
 
 #subtítulo, definido no topo do código.
-        print(cadastro2.center(50))
+        sleep(2)
+        print(subtitulo.center(50))
 
         print('''campo obrigatório*''')
         print('_' * 50)
@@ -84,13 +86,46 @@ while ['dia_devolução'] < ['dia_retirada']:
             cadastro['gmail'] = str(input('Gmail: '))
             print('_' * 50)
 
-#printando o dicionário 'cadastro'.
-            print(cadastro)
+#simulafor de votão seguido de uma pousa.
+            continuar1 = input('                      enviar')
+            sleep(2)
+
+#construção das tabelas que contém os dados.
+            print()
+            print('DADOS PESSOAIS')
+            print('*' *50)
+            for v, k in cadastro.items():
+                print(f'{v}: {k}')
+            print('*' *50)
+            print()
+
+
+            print('DADOS DO VEÍCULO')
+            print('*' *50)
+            for v, l in necessidades.items():
+                print(f'{v}: {k}')
+            print('*' *50)
+            
+            seguir = input('                   enviar')
+            sleep(2)
+
+#mensagem para o usuário, com um format imbutido.
+            print(f"{cadastro['nome']}, entraremos em contato o mais breve possível!")
+            print('Agradecemos a preferência')
+            break
             
 #fechamento da condicional(2), (não permitindo o aluguel para usuários com menos de 18 anos). Parando o código.
         else:
-            print(f"{cadastro['nome']}, você não possui a idade minima para alugar uma carro")
+            print("Parece que ocorreu um erro. Aguarde...")
+            sleep(5)
+            print()
+            print(f"{cadastro['nome']}, você não possui a idade mínima para continuar com nossos serviços")
+            print('Para mais informações acesse: Alugueja@gmail.com')
             break
+
+        
+
+        
     
 
         
