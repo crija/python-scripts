@@ -1,3 +1,5 @@
+'''EXEMPLO 1'''
+
 #Calcular o fatorial de um número e retorna-lo para o programa principal.
 
 #Função com o parâmetro 'num', que se não receber nenhum número, vai utilizar o número '1'.
