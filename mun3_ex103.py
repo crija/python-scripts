@@ -2,6 +2,12 @@
 #o primeiro que indique o número a calcular e o  outro chamado show, que será um valor lógico (opcional) indicando se será mostrado ou não na tela o processo de cálculo do fatorial. 
 
 def fatorial(n=1, show = False):
+    """
+    ->Calcular o fatorial de um número.
+     :param n: O número a ser calculado.
+     :param show: (opcional) Mostrar ou não a conta.
+     :return: O valor do Fatorial de um número n.
+    """
     f = 1
     for c in range(n, 0, -1):
         if show:
@@ -16,4 +22,5 @@ def fatorial(n=1, show = False):
     
 
 #programa principal:
-print(fatorial(3, show=True))
+#print(fatorial(3, show=True))
+help(fatorial)
