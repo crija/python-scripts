@@ -5,7 +5,7 @@
 def par (n=0):
 
 #Condição de retorno.
-    if n % 2 = 0:
+    if n % 2 == 0:
         return True 
     else:
         return False
