@@ -1,29 +1,33 @@
  #Faça um algoritimo que leia o preço de um produto e mostre seu novo preço, com 70% de desconto:
-produtos = {'Cadeira gamer': 'R$4.999', 'Sofá 4 lugares': 'R$3.578', 'Cama com baú' : 'R$2.670', 'Geladeira': 'R$5.000', 'Mesa de jantar 6 lugares': 'R$4.899'  }
+produtos = {'Cadeira gamer': 4.999, 'Sofá 4 lugares': 3.578, 'Cama com baú' : 2.679, 'Geladeira': 5.688, 'Mesa de jantar 6 lugares': 4.899}
 
-def lin():
+informacoes = {}
+
+def line():
     print('**********************************')
 
 def espaco():
     print()
 
 espaco()
-print('PARABÉNS, VOCẼ ACABA DE GANHAR 70% DE DESCONTO EM QUALQUER PRODUTO DA LISTA ABAIXO!')
+print('PARABÉNS, VOCÊ ACABA DE GANHAR 70% DE DESCONTO EM QUALQUER PRODUTO DA LISTA ABAIXO!')
 espaco()
-lin()
+line()
 espaco()
 
 for k, v in produtos.items():
-    print(f'{k}: {v}')
+    print(f'{k}: R${v}')
 
 espaco()
-lin()
+line()
 espaco()
 
 
 valor = 0
-while valor != 4.999 and valor != 3.578 and valor != 2.670 and valor !=5.000 and valor != 4.899:
-    valor = float(input('Digite um dos valores a cima: R$'))
+while valor not in produtos.values():
+    valor = float(input('Digite o valor do produto desejado: '))
+    print('valor não encontrado')
+    
 else:
     desconto = valor - (valor * 70 /100)
 
@@ -35,51 +39,53 @@ else:
     print('INFORMAÇÕES:')
 
     espaco()
-    name = ''
-    while name == '':
+    informacoes['name'] = ''
+    while informacoes['name'] == '':
         print('_' *30)
-        name = str(input('Digite seu nome: '))
-        if name == '':
+        informacoes['name'] = str(input('Digite seu nome: '))
+        if informacoes['name'] == '':
             print('Campo obrigatório ^')
 
     else:
-        email = ''
-        while email == '':
-            email = input('Digite seu email:')
-            if email == '':
+        informacoes['email'] = ''
+        while informacoes['email'] == '':
+            informacoes['email'] = input('Digite seu email:')
+            if informacoes['email'] == '':
                 print('Campo obrigatório ^')
                 
         else:            
-            idade = int(input('Digite sua idade: '))
+            informacoes['idade'] = int(input('Digite sua idade: '))
 
-            print('_' *30)
+        print('_' *30)
 
-            if idade < 17:
-                print('Cadastro não disponível para menores de 18 anos')
+        if informacoes['idade'] < 17:
+            print('Cadastro não disponível para menores de 18 anos')
 
+        else:
+            espaco()
+            for k, v in informacoes.items():
+                print(f'{k}: {v}')
+
+            espaco()
+            print('SEGURANÇA:')
+
+            print('Para manter sua conta segura siga as instruções abaixo.')
+            espaco()
+
+            nome = str(input('Digite apenas seu primeiro nome: '))
+
+            if nome == '':
+                print('Preenchimento obrigatório!')
             else:
-                espaco()
-                print('nome:{}, gmail:{} , idade:{} anos.'.format(name, email, idade))
-                espaco()
-                print('SEGURANÇA:')
+                senha = input('Crie uma senha de acesso: ')
 
-                print('Para manter sua conta segura siga as instruções abaixo.')
-                espaco()
-
-                nome = str(input('Digite apenas seu primeiro nome: '))
-
-                if nome == '':
-                    print('Preenchimento obrigatório!')
+                if senha == '' or senha == ' ':
+                    print('Crie uma senha para manter suas informações seguras!')
                 else:
-                    senha = input('Crie uma senha de acesso: ')
+                    confirmar = input('Confirme sua senha: ')
 
-                    if senha == '' or senha == ' ':
-                        print('Crie uma senha para manter suas informações seguras!')
+                    if confirmar != senha:
+                        print('Senha incorreta:')
                     else:
-                        confirmar = input('Confirme sua senha: ')
-
-                        if confirmar != senha:
-                            print('Senha incorreta:')
-                        else:
-                            print('Tudo certo.')
-                            print('AGRADECEMOS A PREFERENCIA!')
+                        print('Tudo certo.')
+                        print('AGRADECEMOS A PREFERENCIA!')
