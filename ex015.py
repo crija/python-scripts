@@ -22,7 +22,6 @@ espaco()
 line()
 espaco()
 
-
 valor = 0
 while valor not in produtos.values():
     valor = float(input('Digite o valor do produto desejado: '))
@@ -69,9 +68,8 @@ else:
             espaco()
             print('SEGURANÇA:')
 
-            print('Para manter sua conta segura crie uma senha de acesso.')
+            print(f'{informacoes["name"]}, para manter sua conta segura crie uma senha de acesso.')
             espaco()
-            
             
             while True:
                 senha = input('Crie uma senha: ')
