@@ -69,23 +69,19 @@ else:
             espaco()
             print('SEGURANÇA:')
 
-            print('Para manter sua conta segura siga as instruções abaixo.')
+            print('Para manter sua conta segura crie uma senha de acesso.')
             espaco()
-
-            nome = str(input('Digite apenas seu primeiro nome: '))
-
-            if nome == '':
-                print('Preenchimento obrigatório!')
-            else:
-                senha = input('Crie uma senha de acesso: ')
-
-                if senha == '' or senha == ' ':
-                    print('Crie uma senha para manter suas informações seguras!')
-                else:
-                    confirmar = input('Confirme sua senha: ')
-
-                    if confirmar != senha:
-                        print('Senha incorreta:')
-                    else:
-                        print('Tudo certo.')
-                        print('AGRADECEMOS A PREFERENCIA!')
+            
+            
+            while True:
+                senha = input('Crie uma senha: ')
+                if senha != '':
+                    break
+                    
+            while True:
+                confirmar_senha = input('Confirme sua senha: ')
+                if confirmar_senha == senha:
+                    print(f'Tudo certo. Agradecemos a preferência, sr(sra) {informacoes["name"]}!')
+                    break
+                    
+                
