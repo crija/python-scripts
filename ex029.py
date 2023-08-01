@@ -9,4 +9,5 @@ lista = [n1, n2, n3, n4]
 
 sorteio = random.choice(lista)
 
-print('A ordem da apresentação será')
+print(f'O aluno sorteado é: {sorteio}')
+
