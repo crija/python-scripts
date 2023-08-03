@@ -1,5 +1,3 @@
-'''
-
 Conceitos de Orientação a Objeto.
 
 Classes: Definição do Objeto
@@ -31,10 +29,8 @@ Uma classe pode herdar atributos, métodos e/ou funções de outra.
 Encapsulamento: Níveis de acesso
 O encapsulamento permite que os atributos sejam vistos somente nas classes onde foram declarados, definindo o nível de acesso de atributos, métodos ou funções.
 
-
 Polimorfismo: Sobrescrita
 Escolher entre os atributos, métodos e/ou funções que sobrescreveram ou que foram sobrescritos.
-
 
 As classes em Python nos auxiliam na otimização de um projeto.
 Em um projeto orientado a objetos utilizamos as classes para definição dos objetos.
@@ -58,8 +54,3 @@ Variáveise/ouObjetos:
 .Utilizar nomes pequenos.
 .Utilizar sempre caracteres minúsculos.
 .Utilizar o underline para unir nomes compostos.
-
-
-
-
-'''
