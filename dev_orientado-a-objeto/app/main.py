@@ -1,1 +1,0 @@
-print('Testando o projeto')
