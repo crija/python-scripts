@@ -9,5 +9,5 @@ from Conta import Conta
 c1 = Cliente("João", "114444-2222")
 conta = Conta(c1.nome, 6565, 0)
 
-print(f'{conta.titular} {conta.numero}, Seu Saldo: {conta.saldo}')
+print(f'Nome do titular: {conta.titular}, numero: {conta.numero}, Seu Saldo: {conta.saldo}')
 
