@@ -11,4 +11,6 @@ class Pessoa:
         
 pessoa1 = Pessoa('Eduardo', 27, 'M', True)
 pessoa1.desativar()
+pessoa1.ativo = False
+print(pessoa1.ativo)
 
