@@ -98,5 +98,5 @@ r3 = somar(1, 4)
 print(f'Os resultados foram {r1}, {r2}, {r3}')
 - Retornará todos os valores dentro do format.
 
-
+'''
 
