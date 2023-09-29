@@ -1,12 +1,9 @@
 import random
 
-nome1 = input('Digite seu nome: ')
-nome2 = input('Digite seu nome: ')
-nome3 = input('Digite seu nome: ')
-nome4 = input('Digite seu nome: ')
-
-lista = [nome1, nome2, nome3, nome4]
-
-sorteio = random.choice(lista)
-
-print('O aluno sorteado foi:',sorteio)
+list =[]
+print('Name draw')
+for n in range(1, 5):
+    name = input('Type your name: ')
+    list.append(name)
+student = random.choice(list)
+print(f'The student drawn was: {student}')
