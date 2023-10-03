@@ -1,16 +1,16 @@
-class Pessoa:
-    def __init__(self, nome, idade, sexo, ativo):
-        self.nome = nome
-        self.idade = idade
-        self.sexo = sexo
+class Person:
+    def __init__(self, name, age, gender, active):
+        self.name = name
+        self.age = age
+        self.gender = gender
 
 
-    def desativar(self):
-        self.ativo = False
-        print(f'{pessoa1} foi desafivada com sucesso')
+    def desable(self):
+        self.active = False
+        print(f'{person1} has been deactivated.')
         
-pessoa1 = Pessoa('Eduardo', 27, 'M', True)
-pessoa1.desativar()
-pessoa1.ativo = True
-print(pessoa1.ativo)
+person1 = Person('Eduardo', 27, 'M', True)
+person1.desable()
+person1.active = True
+print(person1.active)
 
