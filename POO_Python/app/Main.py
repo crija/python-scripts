@@ -1,14 +1,14 @@
 class Main:
     pass
 
-from Cliente import Cliente
+from POO_Python.app.Client import Client
 
-from Conta import Conta
+from POO_Python.app.Account import Account
 
-c1 = Cliente("João", "114444-2222")
-conta = Conta(c1.get_nome(), 1222)
+c1 = Client("João", "114444-2222")
+account = Account(c1.get_name(), 1222)
 
-conta.deposita(100)
-conta.saque(50)
-conta.extrato()
+account.deposit(100)
+account.transfer(50)
+account.extract()
 
