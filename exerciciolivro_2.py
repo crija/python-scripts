@@ -4,24 +4,16 @@ list_additionals = {1:'cheddar' , 2:'maionese verde', 3:'batata palha', 4:'milho
 chosen_igredients = []
 chosen_additional = []
 
-def igredients():
-    print('Igredientes Disponíveis')
-    for i in list_igredients:
-        print(i)
-
 print('Tamanhos')
 for t, f in pizza_sizes.items():
     print(t, f)
 
 choose_pizza_size = str(input('Digite o tamanho escolhido: ')).upper()
 
-match choose_pizza_size:
-    case 'P':
-        igredients()
-    case 'M':
-        igredients()
-    case 'G':
-        igredients()
+if choose_pizza_size == 'P' or 'M' or 'G':
+    print('Igredientes Disponíveis')
+    for i in list_igredients:
+        print(i)
 
 stop = ''
 while stop != 'skip':
@@ -34,6 +26,7 @@ igrediente_adicional = str(input('Igrediente adicional? [yes or no]')).lower()
 if igrediente_adicional == 'yes':
     for k, v in list_additionals.items():
         print(k, v)
+
     while igrediente_adicional != 'no':
         igrediente_adicional = int(input('Digite o número do adicional escolhido: '))
         chosen_additional.append(igrediente_adicional)
