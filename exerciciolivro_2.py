@@ -1,59 +1,53 @@
-tamanho = {'P:': '4 fatias', 'M:': '8 fatias', 'G:': '12 fatias'}
-igredientes_dis = ['queijo', 'calabresa', 'carne', 'frango', 'brócolis', 'atum', 'cebola', 'presunto', 'molho vermalho']
-adicional = {1:'cheddar' , 2:'maionese verde', 3:'batata palha', 4:'milho verde'}
-adicionais_escolhidos = []
+pizza_sizes = {'P:': '4 fatias', 'M:': '8 fatias', 'G:': '12 fatias'}
+list_igredients = ['queijo', 'calabresa', 'carne', 'frango', 'brócolis', 'atum', 'cebola', 'presunto', 'molho vermelho']
+list_additionals = {1:'cheddar' , 2:'maionese verde', 3:'batata palha', 4:'milho verde'}
+chosen_igredients = []
+chosen_additional = []
 
-def igredientes():
+def igredients():
     print('Igredientes Disponíveis')
-    for i in igredientes_dis:
+    for i in list_igredients:
         print(i)
 
 print('Tamanhos')
-for t, f in tamanho.items():
+for t, f in pizza_sizes.items():
     print(t, f)
 
-escolher_tamanho = str(input('Digite o tamanho escolhido: ')).upper()
+choose_pizza_size = str(input('Digite o tamanho escolhido: ')).upper()
 
-match escolher_tamanho:
+match choose_pizza_size:
     case 'P':
-        igredientes()
-        p = str(input('Escolha até 3 iguedientes: '))
+        igredients()
     case 'M':
-        igredientes()
-        m = str(input('Escolha até 4 iguedientes: '))
+        igredients()
     case 'G':
-        igredientes()
-        g = str(input('Escolha até 5 igredientes: '))
+        igredients()
 
-'''
 stop = ''
 while stop != 'skip':
     escolha = str(input('Adicione um igrediente na pizza: '))
-    igredientes.append(escolha)
+    chosen_igredients.append(escolha)
     print(f'{escolha} adicionado')
     stop = str(input('Para sair digite skip: '))
 
-igrediente_adicional = str(input('Igrediente adicional? ')).lower()
-if igrediente_adicional == 'sim':
-    for k, v in adicional.items():
+igrediente_adicional = str(input('Igrediente adicional? [yes or no]')).lower()
+if igrediente_adicional == 'yes':
+    for k, v in list_additionals.items():
         print(k, v)
-
-selecionar_adicional = ''
-while selecionar_adicional != 'nao':
-    numero_adicional = int(input('Digite o número do adicional escolhido: '))
-    adicionais_escolhidos.append(numero_adicional)
-    selecionar_adicional = str(input(f'Você escolheu {numero_adicional}. Escolher mais adicionais?[y or no] (Para sair digite sair.): ')).lower()
-    if selecionar_adicional == 'sair':
-        break
-
+    while igrediente_adicional != 'no':
+        igrediente_adicional = int(input('Digite o número do adicional escolhido: '))
+        chosen_additional.append(igrediente_adicional)
+        selecionar_adicional = str(input(f'Você escolheu {igrediente_adicional}. Escolher mais adicionais?[yes or no]: ')).lower()
+        if selecionar_adicional == 'no':
+            break
 
 print('Igredientes adicionados')
-for i in igredientes:
+for i in chosen_igredients:
     print(i)
 print('Número dos adicionais')
-for a in adicionais_escolhidos:
+for a in chosen_additional:
     print(a)
 
-'''
+
 
 
