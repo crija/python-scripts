@@ -5,11 +5,48 @@ list_edge = ['catupiry', 'cheddar', 'morango', 'chocolate branco', 'bombom']
 chosen_igredients = []
 chosen_additional = []
 
+def igredients_pizza_p():
+    for i in list_igredients:
+        print(i)
+    print('Escolha 3 igredientes')
+    for i in range(0, 3):
+        p = str(input('Adicione um igrediente: '))
+        chosen_igredients.append(p)
+
+def igredients_pizza_m():
+    for i in list_igredients:
+        print(i)
+    print('Escolha 4 igredientes')
+    for i in range(0, 4):
+        m = str(input('Adicione um igrediente: '))
+        chosen_igredients.append(m)
+
+def igredients_pizza_g():
+    for i in list_igredients:
+        print(i)
+    print('Escolha 5 igredientes')
+    for i in range(0, 5):
+        g = str(input('Adicione um igrediente: '))
+        chosen_igredients.append(g)
+
+
+
+
+
 print('Tamanhos')
 for t, f in pizza_sizes.items():
     print(t, f)
 
 choose_pizza_size = str(input('Digite o tamanho escolhido: ')).upper()
+match choose_pizza_size:
+    case 'P':
+        igredients_pizza_p()
+    case 'M':
+        igredients_pizza_m()
+    case 'G':
+        igredients_pizza_g()
+
+
 
 print('Bordas')
 for b in list_edge:
@@ -19,20 +56,6 @@ print('Se preferir sem borda digite (sem)')
 add_edge = str(input('Escolha o recheio da borda: ')).lower()
 if add_edge == 'sem':
     print('ok')
-
-
-if choose_pizza_size == 'P' or 'M' or 'G':
-    print('Igredientes Disponíveis')
-    for i in list_igredients:
-        print(i)
-
-escolha = ''
-while escolha != 'skip':
-    escolha = str(input('Adicione um igrediente na pizza: '))
-    if escolha == 'skip':
-        break
-    chosen_igredients.append(escolha)
-
 
 
 igrediente_adicional = str(input('Igrediente adicional? [yes or no]')).lower()
