@@ -29,10 +29,6 @@ def igredients_pizza_g():
         g = str(input('Adicione um igrediente: '))
         chosen_igredients.append(g)
 
-
-
-
-
 print('Tamanhos')
 for t, f in pizza_sizes.items():
     print(t, f)
@@ -45,8 +41,6 @@ match choose_pizza_size:
         igredients_pizza_m()
     case 'G':
         igredients_pizza_g()
-
-
 
 print('Bordas')
 for b in list_edge:
@@ -72,11 +66,11 @@ if igrediente_adicional == 'yes':
 
 print('Tamanho')
 print(f'{choose_pizza_size}')
-print('Borda')
-print(f'{add_edge}')
 print('Igredientes adicionados')
 for i in chosen_igredients:
     print(i)
+print('Borda')
+print(f'{add_edge}')
 print('Número dos adicionais')
 for a in chosen_additional:
     print(a)
