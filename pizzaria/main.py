@@ -1,10 +1,9 @@
 from limiters import *
 
 pizza_sizes = {'P:': '4 fatias - R$34,99', 'M:': '8 fatias - R$42,99', 'G:': '12 fatias - R$55,99'}
-list_igredients = ['queijo', 'calabresa', 'carne', 'frango', 'brócolis', 'atum', 'cebola', 'presunto', 'molho vermelho']
 list_additionals = {1:'cheddar' , 2:'maionese verde', 3:'batata palha', 4:'milho verde'}
 list_edge = ['catupiry', 'cheddar', 'morango', 'chocolate branco', 'bombom']
-chosen_igredients = []
+
 chosen_additional = []
 
 print('Tamanhos')

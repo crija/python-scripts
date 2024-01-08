@@ -1,5 +1,5 @@
-from main import list_igredients
-from main import chosen_igredients
+list_igredients = ['queijo', 'calabresa', 'carne', 'frango', 'brócolis', 'atum', 'cebola', 'presunto', 'molho vermelho']
+chosen_igredients = []
 
 def igredients_pizza_p():
     for i in list_igredients:
