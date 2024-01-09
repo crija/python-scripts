@@ -1,3 +1,4 @@
+import csv
 from limiters import *
 
 pizza_sizes = {'P:': '4 fatias - R$34,99', 'M:': '8 fatias - R$42,99', 'G:': '12 fatias - R$55,99'}
@@ -40,16 +41,20 @@ if igrediente_adicional == 'yes':
         if selecionar_adicional == 'no':
             break
 
-print('Tamanho')
-print(f'{choose_pizza_size}')
-print('Igredientes adicionados')
-for i in chosen_igredients:
-    print(i)
-print('Borda')
-print(f'{add_edge}')
-print('Número dos adicionais')
-for a in chosen_additional:
-    print(a)
+with open("pizzaria/aquivo.csv", 'w', newline='') as arquivo:
+    escrever = csv.writer(arquivo)
+    for i in chosen_igredients:
+        escrever.writerow([i])
+
+
+
+
+
+
+
+
+
+
 
 
 
