@@ -37,11 +37,11 @@ if igrediente_adicional == 'yes':
     while igrediente_adicional != 'no':
         igrediente_adicional = int(input('Digite o número do adicional escolhido: '))
         chosen_additional.append(igrediente_adicional)
-        selecionar_adicional = str(input(f'Você escolheu {igrediente_adicional}. Escolher mais adicionais?[yes or no]: ')).lower()
+        selecionar_adicional = str(input(f'Você escolheu {igrediente_adicional}. Escolher mais adicionais?[yes or no]: ')).clower()
         if selecionar_adicional == 'no':
             break
 
-with open("pizzaria/aquivo.csv", 'w', newline='') as arquivo:
+with open("pizzaria/aquivo.csv", 'a', newline='') as arquivo:
     escrever = csv.writer(arquivo)
     for i in chosen_igredients:
         escrever.writerow([i])
