@@ -1,3 +1,5 @@
-repolho
-frango
-atum
+tamaho,igredientes,adicional,borda
+"{'tamaho': 'P', 'igredientes': ['brocolis', 'atum', 'cebola'], 'adicional': [], 'borda': 'morango'}"
+"{'tamaho': 'M', 'igredientes': ['cebola', 'carne', 'queijo', 'atum'], 'adicional': [3, 1], 'borda': 'bombom'}"
+"{'tamaho': 'P', 'igredientes': ['fan', 'fan', 'fjai'], 'adicional': [], 'borda': 'sem'}"
+

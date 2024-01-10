@@ -4,7 +4,6 @@ from limiters import *
 pizza_sizes = {'P:': '4 fatias - R$34,99', 'M:': '8 fatias - R$42,99', 'G:': '12 fatias - R$55,99'}
 list_additionals = {1:'cheddar' , 2:'maionese verde', 3:'batata palha', 4:'milho verde'}
 list_edge = ['catupiry', 'cheddar', 'morango', 'chocolate branco', 'bombom']
-
 chosen_additional = []
 
 print('Tamanhos')
@@ -37,14 +36,25 @@ if igrediente_adicional == 'yes':
     while igrediente_adicional != 'no':
         igrediente_adicional = int(input('Digite o número do adicional escolhido: '))
         chosen_additional.append(igrediente_adicional)
-        selecionar_adicional = str(input(f'Você escolheu {igrediente_adicional}. Escolher mais adicionais?[yes or no]: ')).clower()
+        selecionar_adicional = str(input(f'Você escolheu {igrediente_adicional}. Escolher mais adicionais?[yes or no]: ')).lower()
         if selecionar_adicional == 'no':
             break
 
+
+arq = ({
+    'tamaho': choose_pizza_size,
+    'igredientes': chosen_igredients,
+    'adicional': chosen_additional,
+    'borda': add_edge,
+    })
+
+
+
+
 with open("pizzaria/aquivo.csv", 'a', newline='') as arquivo:
     escrever = csv.writer(arquivo)
-    for i in chosen_igredients:
-        escrever.writerow([i])
+    escrever.writerow(arq)
+arquivo.close()
 
 
 
