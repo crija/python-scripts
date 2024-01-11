@@ -41,20 +41,19 @@ if igrediente_adicional == 'yes':
             break
 
 
-arq = ({
-    'tamaho': choose_pizza_size,
-    'igredientes': chosen_igredients,
-    'adicional': chosen_additional,
-    'borda': add_edge,
-    })
+with open("pizzaria/arquivo.csv", 'a', newline='') as arquivo:
+    campos_head = ['tamanho', 'igredientes', 'borda', 'adicional']
+    writer = csv.DictWriter(arquivo, fieldnames=campos_head, delimiter=';')
+    if arquivo.tell() == 0:
+        writer.writeheader()
 
-
-
-
-with open("pizzaria/aquivo.csv", 'a', newline='') as arquivo:
-    escrever = csv.writer(arquivo)
-    escrever.writerow(arq)
-arquivo.close()
+    writer.writerow({
+                        'tamanho': choose_pizza_size,
+                        'igredientes': chosen_igredients,
+                        'borda': add_edge,
+                        'adicional': chosen_additional
+                    })
+    arquivo.close()
 
 
 
