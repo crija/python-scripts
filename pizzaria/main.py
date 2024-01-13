@@ -32,7 +32,7 @@ if add_edge == list_edge[0]:
 elif add_edge == list_edge[1]:
     final_value.append(edge_value[1])
 else:
-    final_value.append(edge_value[0])
+    final_value.append(edge_value[2])
 
 igrediente_adicional = str(input('Igrediente adicional? [yes or no]')).lower()
 if igrediente_adicional == 'yes':
@@ -55,16 +55,11 @@ if igrediente_adicional == 'yes':
 
         selecionar_adicional = str(input(f'Você escolheu {igrediente_adicional}. Escolher mais adicionais?[yes or no]: ')).lower()
 
-
-
-        print(final_value)
-        print(sum(final_value))
-
         if selecionar_adicional == 'no':
             break
 
 with open("pizzaria/arquivo.csv", 'a', newline='') as arquivo:
-    campos_head = ['tamanho', 'igredientes', 'borda', 'adicional']
+    campos_head = ['tamanho', 'igredientes', 'borda', 'adicional', 'total']
     writer = csv.DictWriter(arquivo, fieldnames=campos_head, delimiter=';')
 
     if arquivo.tell() == 0:
@@ -74,7 +69,8 @@ with open("pizzaria/arquivo.csv", 'a', newline='') as arquivo:
                         'tamanho': choose_pizza_size,
                         'igredientes': chosen_flavor,
                         'borda': add_edge,
-                        'adicional': chosen_additional
+                        'adicional': chosen_additional,
+                        'total': sum(final_value),
                     })
     arquivo.close()
 
