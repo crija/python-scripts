@@ -1,3 +1,10 @@
-tamanho;igredientes;borda;adicional
-P;['', '', ''];;[]
-M;['', '', '', ''];;[]
+tamanho;igredientes;borda;adicional;total
+P;['fjan', 'fafj', 'fnaj'];bombom;[];50.89
+FKANF;[];fkan;[];0
+P;['fan', 'fan', 'eijn'];bombom;[];50.89
+P;['fkna', 'fan', 'fjieh'];bombom;['morango'];56.04
+P;['fjan', 'aif', 'f'];bombom;['morango'];56.04
+P;['', '', ''];;[];0
+P;['mlm', 'mk', 'knkn'];bombom;['cheddar'];0
+P;['fnjan', 'fdn', 'fan'];bombom;morango;56.04
+P;['4 queijos', 'portuguesa', 'margarita', 'frango', 'brócolis', 'atum', 'escarola', 'toscana', 'vegetariana', 'coração', 'chocolate preto', 'prestigio', 'brigadeiro', 'nutella', 'sorvete'];bombom;chocolate preto;59.79
