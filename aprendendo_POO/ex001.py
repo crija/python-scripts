@@ -6,13 +6,16 @@ class Caneta:
         self.carga = carga
         self.tampa = tampa
 
-    def rabiscar(ponta):
+    def rabiscar(self):
         if caneta.ponta == 1.0:
             print('Pintar desenho')
         else:
             print('Escrever carta')
 
+    def rabiscar():
+        print('9')
 
+Caneta.rabiscar()
 
-caneta = Caneta('faber', 'preta', 0.75, 80, True)
-caneta.rabiscar()
+caneta = Caneta('faber', 'preta', 1.0, 80, True)
+#caneta.rabiscar()
