@@ -1,20 +1,11 @@
-def armazenar(nome, idade, peso):
-    return nome, idade, peso
+class Person:
+    def __init__(self, name, age, logged):
+        self.name = name
+        self.age = age
+        self.logged = logged
 
-dados = armazenar('Ana', 3, 17)
-print(dados)
+def armazenar_dados(self):
+    print(f'Nome: {self.name}, Idade: {self.age}, Loggend: {self.logged}')
 
-
-
-
-
-
-
-
-
-'''def soma(a, b):
-    return a + b
-
-resultado = soma(3, 8)
-print(resultado)
-'''
+person1 = Person('Ana', 12, True)
+armazenar_dados(person1)
