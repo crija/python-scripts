@@ -4,10 +4,7 @@ class Person:
         self.age = age
         self.logged = logged
 
-    def armazenar_dados(self):
-        print(f'Nome: {self.name}, Idade: {self.age}, Loggend: {self.logged}')
-
-    def permitir_acesso(self):
+    def acesso(self):
         if self.age < 18:
             print('Negar acesso!')
             self.logged = False
@@ -15,7 +12,10 @@ class Person:
             print('Login feito com sucesso')
             self.logged = True
 
+    def armazenar_dados(self, dados_sensiveis):
+        return (f'Dados de acesso: {self.name, self.age, self.logged}\nDados sensíveis: {dados_sensiveis}')
 
-person1 = Person('Ana', 12, False)
-person1.permitir_acesso()
-person1.armazenar_dados()
+person1 = Person('Ana', 14, False)
+dados_sensiveis = {'gmail': 'aninha@gmail.com', 'senha': 2976}
+person1.acesso()
+person1.armazenar_dados(dados_sensiveis)
