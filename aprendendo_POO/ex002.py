@@ -4,8 +4,18 @@ class Person:
         self.age = age
         self.logged = logged
 
-def armazenar_dados(self):
-    print(f'Nome: {self.name}, Idade: {self.age}, Loggend: {self.logged}')
+    def armazenar_dados(self):
+        print(f'Nome: {self.name}, Idade: {self.age}, Loggend: {self.logged}')
 
-person1 = Person('Ana', 12, True)
-armazenar_dados(person1)
+    def permitir_acesso(self):
+        if self.age < 18:
+            print('Negar acesso!')
+            self.logged = False
+        else:
+            print('Login feito com sucesso')
+            self.logged = True
+
+
+person1 = Person('Ana', 12, False)
+person1.permitir_acesso()
+person1.armazenar_dados()
