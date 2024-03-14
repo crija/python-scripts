@@ -5,7 +5,7 @@ class Person:
         self.logged = logged
 
     def acesso(self):
-        if self.age < 18:
+        if dados_sensiveis != dados_sensiveis:
             print('Negar acesso!')
             self.logged = False
         else:
