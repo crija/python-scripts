@@ -1,3 +1,5 @@
+# Login de acesso: Verificar os dados para permitir ou negar o acesso do usuário
+
 class Person:
     def __init__(self, name, age, logged):
         self.name = name
