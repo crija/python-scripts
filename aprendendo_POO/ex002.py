@@ -1,23 +1,23 @@
-# Login de acesso: Verificar os dados para permitir ou negar o acesso do usuário
+# Login de acesso: Verificar o gmail e senha para permitir ou negar o acesso do usuário.
 
-class Person:
-    def __init__(self, name, age, logged):
+class Usuario:
+    def __init__(self, name, age, gmail, senha, logged):
         self.name = name
         self.age = age
+        self.gmail = gmail
+        self.senha = senha
         self.logged = logged
 
-    def acesso(self):
-        if dados_sensiveis != dados_sensiveis:
-            print('Negar acesso!')
-            self.logged = False
+    def login(self, gmail_tentativa, senha_tentativa):
+        if self.gmail == gmail_tentativa and self.senha == senha_tentativa:
+            print(f'{self.logged == False}')
         else:
-            print('Login feito com sucesso')
-            self.logged = True
+            print(f'{self.logged == True}')
 
-    def armazenar_dados(self, dados_sensiveis):
-        return (f'Dados de acesso: {self.name, self.age, self.logged}\nDados sensíveis: {dados_sensiveis}')
+    def armazenar_dados(self):
+        return (f'Usuário: {self.name, self.age, self.logged}')
 
-person1 = Person('Ana', 14, False)
-dados_sensiveis = {'gmail': 'aninha@gmail.com', 'senha': 2976}
-person1.acesso()
-person1.armazenar_dados(dados_sensiveis)
+person1 = Usuario('Ana', 14, 'aninha@gmail.com', '90gE1', False)
+
+person1.login('aninha@gmail.com', '90gw1')
+person1.armazenar_dados()
