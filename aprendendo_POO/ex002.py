@@ -17,7 +17,7 @@ class Usuario:
         else:
             print(f'Usuário logado: {self.logged == True}')
 
-   def armazenar_dados(self):
+    def armazenar_dados(self):
         return (f'Usuário: {self.name, self.age, self.logged}')
 
 '''  def verificar_escolha(self, escolher_mudar_senha):
