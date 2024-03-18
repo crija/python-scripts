@@ -1,44 +1,50 @@
-# Login de acesso: Verificar o gmail e senha para permitir ou negar o acesso do usuário.
-# Mudar senha: Fazer verificação da senha atual para o usuário conseguir mudar a senha.
+'''
+Login de acesso: Verificar o gmail e senha para permitir ou negar o acesso do usuário.
+Mudar senha:
+ - Verificar se o usuário está logado;
+ - Usuário insere senha atual para a troca de senha ser possível;
+ - Se a senha inserida estiver correta o usuário pode inserir a senha nova
+ - Salvar a senha nova no lugar da senha antiga.
+'''
 
 class Usuario:
-    def __init__(self, name, age, gmail, senha, logged, mudar_senha, verificar_senha):
+    def __init__(self, name, age, gmail, senha, logged):
         self.name = name
         self.age = age
         self.gmail = gmail
         self.senha = senha
         self.logged = logged
-        self.mudar_senha = mudar_senha
-        self.verificar_senha = verificar_senha
 
     def login(self, gmail_tentativa, senha_tentativa):
         if self.gmail == gmail_tentativa and self.senha == senha_tentativa:
-            print(f'Usuário logado: {self.logged == False}')
+            person1.logged = True
+            print(f'Usuário logado: {self.logged}')
         else:
-            print(f'Usuário logado: {self.logged == True}')
+            person1.logged = False
+            print(f'Usuário logado: {self.logged}')
+
+
+    def trocar_senha(self, escolher_mudar_senha, senha_atual, nova_senha):
+        if self.logged == True:
+            print('Quer mudar a senha?')
+            if escolher_mudar_senha == 'sim':
+                print('Digite sua senha atual')
+                if senha_atual == self.senha:
+                    print('Digite sua nova senha')
+                    person1.senha = nova_senha
+                    print(f'senha anterior: {senha_atual}')
+                    print(f'nova senha: {nova_senha}')
+                else:
+                    print('senha incorreta')
+            else:
+                print('ok')
 
     def armazenar_dados(self):
-        return (f'Usuário: {self.name, self.age, self.logged}')
+        print(f'Usuário: {self.name, self.age, self.logged, self.gmail, self.senha}')
 
-'''  def verificar_escolha(self, escolher_mudar_senha):
-        if escolher_mudar_senha == 'sim':
-            print(f'Mudar senha: {self.mudar_senha == True}')
-        else:
-            print(f'Mudar senha: {self.mudar_senha == False}')
+person1 = Usuario('Ana', 14, 'a', 'b', False)
 
-    def verificar_senha_atual(self, verificar):
-        if verificar == self.senha:
-            print(f'Senha correta: {self.verificar_senha == True}')
-        else:
-            print('Senha incorreta')
-'''
-
-person1 = Usuario('Ana', 14, 'aninha@gmail.com', '90gE1', False, 'sim', '90gE1')
-
-person1.login('aninha@gmail.com', '90gE1')
+person1.login('a', 'b')
+person1.trocar_senha('sim', 'b', '4qa2')
 person1.armazenar_dados()
 
-'''
-person1.verificar_escolha('sim')
-person1.verificar_senha_atual('90gE1')
-'''
