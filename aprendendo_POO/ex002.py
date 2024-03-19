@@ -25,7 +25,7 @@ class Usuario:
 
 
     def trocar_senha(self, escolher_mudar_senha, senha_atual, nova_senha):
-        if self.logged == True:
+        if self.logged:
             print('Quer mudar a senha?')
             if escolher_mudar_senha == 'sim':
                 print('Digite sua senha atual')
@@ -44,7 +44,7 @@ class Usuario:
 
 person1 = Usuario('Ana', 14, 'a', 'b', False)
 
-person1.login('a', 'b')
+person1.login('c', 'b')
 person1.trocar_senha('sim', 'b', '4qa2')
 person1.armazenar_dados()
 
