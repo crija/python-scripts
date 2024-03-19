@@ -3,7 +3,7 @@ Login de acesso: Verificar o gmail e senha para permitir ou negar o acesso do us
 Mudar senha:
  - Verificar se o usuário está logado;
  - Usuário insere senha atual para a troca de senha ser possível;
- - Se a senha inserida estiver correta o usuário pode inserir a senha nova
+ - Se a senha inserida estiver correta o usuário pode inserir a senha nova;
  - Salvar a senha nova no lugar da senha antiga.
 '''
 
@@ -17,16 +17,16 @@ class Usuario:
 
     def login(self, gmail_tentativa, senha_tentativa):
         if self.gmail == gmail_tentativa and self.senha == senha_tentativa:
-            person1.logged = True
+            self.logged = True
             print(f'Usuário logado: {self.logged}')
         else:
-            person1.logged = False
+            self.logged = False
             print(f'Usuário logado: {self.logged}')
 
     def trocar_senha(self, senha_atual, nova_senha):
         if self.logged:
             if senha_atual == self.senha:
-                person1.senha = nova_senha
+                self.senha = nova_senha
             else:
                 print('senha incorreta')
 
