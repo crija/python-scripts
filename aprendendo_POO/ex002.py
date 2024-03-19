@@ -24,27 +24,23 @@ class Usuario:
             print(f'Usuário logado: {self.logged}')
 
 
-    def trocar_senha(self, escolher_mudar_senha, senha_atual, nova_senha):
+    def trocar_senha(self, senha_atual, nova_senha):
         if self.logged:
-            print('Quer mudar a senha?')
-            if escolher_mudar_senha == 'sim':
-                print('Digite sua senha atual')
-                if senha_atual == self.senha:
-                    print('Digite sua nova senha')
-                    person1.senha = nova_senha
-                    print(f'senha anterior: {senha_atual}')
-                    print(f'nova senha: {nova_senha}')
-                else:
-                    print('senha incorreta')
+            print('Digite sua senha atual')
+            if senha_atual == self.senha:
+                print('Digite sua nova senha')
+                person1.senha = nova_senha
+                print(f'senha anterior: {senha_atual}')
+                print(f'nova senha: {nova_senha}')
             else:
-                print('ok')
+                print('senha incorreta')
 
     def armazenar_dados(self):
         print(f'Usuário: {self.name, self.age, self.logged, self.gmail, self.senha}')
 
 person1 = Usuario('Ana', 14, 'a', 'b', False)
 
-person1.login('c', 'b')
-person1.trocar_senha('sim', 'b', '4qa2')
+person1.login('a', 'b')
+person1.trocar_senha('b', '4qa2')
 person1.armazenar_dados()
 
