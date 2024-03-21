@@ -33,6 +33,7 @@ match size:
         for i in range(0, 5):
             g = str(input('Adicione um igrediente: '))
 
+
 print('Bordas')
 for b in LIST_EDGE:
     print(b)

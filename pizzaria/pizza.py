@@ -14,3 +14,5 @@ class Pizza:
         additional_value = LIST_ADDITIONALS.get(self.chosen_additional, 0)
         edge_value = LIST_EDGE.get(self.edge, 0)
         return sum([size_value, additional_value, edge_value])
+
+  #  def escolher_tamanho(self, size):
