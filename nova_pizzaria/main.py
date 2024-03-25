@@ -7,8 +7,27 @@ print('Tamanho')
 for i in valor_pizza.items():
     print(i)
 
-escolher_tamanho = input('Escolha o tamanho: ')
-if escolher_tamanho == 'P':
+escolher_tamanho = input('Escolha o tamanho: ').upper()
+
+print(sabor)
+if escolher_tamanho == 'p':
+    print('Você pode escolher 2 sabores')
+    for s in range(0, 2):
+        escolher_sabor = input('Escolha o sabor: ')
+
+elif escolher_tamanho == 'm':
     print('Você pode escolher 3 sabores')
     for s in range(0, 3):
         escolher_sabor = input('Escolha o sabor: ')
+
+else:
+    print('Você pode escolher 4 sabores')
+    for s in range(0, 4):
+        escolher_sabor = input('Escolha o sabor: ')
+
+print('Borda')
+
+print(borda)
+escolher_borda = input('Escolha a borda: ')
+
+
