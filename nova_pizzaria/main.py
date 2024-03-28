@@ -1,21 +1,18 @@
+import csv
 from pizza import *
-
-sabores = ['4 queijos', 'portuguesa', 'margarita', 'frango', 'brócolis', 'atum', 'escarola', 'toscana', 'vegetariana', 'coração', 'chocolate preto', 'prestigio', 'brigadeiro', 'nutella', 'sorvete']
-adicionais = {'cheddar': 4.25, 'maionese verde': 2.50, 'morango': 5.15, 'chocolate preto': 8.90}
-bordas = {'catupiry': 10.99, 'bombom': 15.90}
-tamanhos = {'p': 34.99, 'm': 42.99, 'g': 55.99}
+from constants import *
 
 pizza = Pizza('', [], '', '')
 
 print('Tamanho')
-for i in tamanhos.items():
+for i in TAMANHOS.items():
     print(i)
 
 escolher_tamanho = input('Escolha o tamanho: ')
 pizza.escolher_tamanho(escolher_tamanho)
 print(pizza.tamanho)
 
-print(sabores)
+print(SABORES)
 if pizza.tamanho == 'p':
     print('Você pode escolher 2 sabores')
     for s in range(0, 2):
@@ -35,13 +32,13 @@ else:
         pizza.escolher_sabor(escolher_sabor)
 
 print('adicional')
-for a in adicionais.items():
+for a in ADICIONAIS.items():
     print(a)
 escolher_adicional = input('Escolha um adicional: ')
 pizza.escolher_adicional(escolher_adicional)
 
 print('Borda')
-print(bordas)
+print(BORDAS)
 escolher_borda = input('Escolha a borda: ')
 pizza.escolher_borda(escolher_borda)
 pizza.valor_total()

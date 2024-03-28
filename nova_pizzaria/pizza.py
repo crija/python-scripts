@@ -1,8 +1,4 @@
-import csv
-adicionais = {'cheddar': 4.25, 'maionese verde': 2.50, 'morango': 5.15, 'chocolate preto': 8.90}
-bordas = {'catupiry': 10.99, 'bombom': 15.90}
-tamanhos = {'p': 34.99, 'm': 42.99, 'g': 55.99}
-
+from constants import *
 class Pizza:
     def __init__(self, tamanho, sabores, adicional, borda):
         self.tamanho = tamanho
@@ -23,6 +19,7 @@ class Pizza:
         self.borda = borda
 
     def valor_total(self):
-        valor_tamanho = tamanhos[self.tamanho]
-        valor_borda = bordas[self.borda]
-        return valor_borda + valor_tamanho
+        valor_tamanho = TAMANHOS[self.tamanho]
+        valor_adicional = ADICIONAIS[self.adicional]
+        valor_borda = BORDAS[self.borda]
+        return valor_tamanho + valor_adicional + valor_borda
