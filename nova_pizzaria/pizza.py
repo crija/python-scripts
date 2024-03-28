@@ -3,9 +3,10 @@ bordas = {'catupiry': 10.99, 'bombom': 15.90}
 tamanhos = {'P': 34.99, 'M': 42.99, 'G': 55.99}
 
 class Pizza:
-    def __init__(self, tamanho, sabores, borda):
+    def __init__(self, tamanho, sabores, adicional, borda):
         self.tamanho = tamanho
         self.sabores = sabores
+        self.adicional = adicional
         self.borda = borda
 
     def escolher_tamanho(self, tamanho):
@@ -13,6 +14,9 @@ class Pizza:
 
     def escolher_sabor(self, sabor):
         self.sabores.append(sabor)
+
+    def escolher_adicional(self, adicional):
+        self.adicional = adicional
 
     def escolher_borda(self, borda):
         self.borda = borda
