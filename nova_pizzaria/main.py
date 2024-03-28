@@ -63,9 +63,6 @@ else:
     bairro = input('Bairro: ')
     dados_cliente.definir_bairro(bairro)
 
-
-
-
 with open("nova_pizzaria/arquivo.csv", 'a', newline='') as arquivo:
     campos_head = ['tamanho', 'igredientes', 'borda', 'adicional', 'total', 'rua', 'numero', 'bairro']
     writer = csv.DictWriter(arquivo, fieldnames=campos_head, delimiter=';')
