@@ -1,9 +1,9 @@
-from pizza import Pizza, Dados_cliente
+from pizza import Pizza, Cliente
 from constants import TAMANHOS, SABORES, ADICIONAIS, BORDAS
 import csv
 
 pizza = Pizza('', [], '', '')
-dados_cliente = Dados_cliente('', 0, '')
+dados_cliente = Cliente('', 0, '')
 
 print('Tamanho')
 for i in TAMANHOS.items():
@@ -64,7 +64,7 @@ else:
     dados_cliente.definir_bairro(bairro)
 
 with open("nova_pizzaria/arquivo.csv", 'a', newline='') as arquivo:
-    campos_head = ['tamanho', 'igredientes', 'borda', 'adicional', 'total', 'rua', 'numero', 'bairro']
+    campos_head = ['tamanho', 'igredientes', 'borda', 'adicional', 'total', 'endereço']
     writer = csv.DictWriter(arquivo, fieldnames=campos_head, delimiter=';')
 
     if arquivo.tell() == 0:
@@ -76,7 +76,5 @@ with open("nova_pizzaria/arquivo.csv", 'a', newline='') as arquivo:
                         'borda': pizza.borda,
                         'adicional': pizza.adicional,
                         'total': pizza.valor_total(),
-                        'rua': dados_cliente.rua,
-                        'numero': dados_cliente.numero,
-                        'bairro': dados_cliente.bairro,
+                        'endereço': {'rua':rua, 'numero': numero_casa, 'bairro': bairro}
                     })
