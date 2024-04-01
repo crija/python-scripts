@@ -50,7 +50,7 @@ print(pizza.adicional)
 
 retirar = input('Retirar no local? ')
 if retirar == 'sim':
-    print('Enformaremos quando estiver printa')
+    print('Enformaremos quando estiver pronta')
 else:
     print('Preencha com o seu endereço')
 
