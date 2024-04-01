@@ -1,4 +1,4 @@
-from constants import *
+from constants import TAMANHOS, ADICIONAIS, BORDAS
 class Pizza:
     def __init__(self, tamanho, sabores, adicional, borda):
         self.tamanho = tamanho

@@ -1,5 +1,5 @@
-from pizza import *
-from constants import *
+from pizza import Pizza, Dados_cliente
+from constants import TAMANHOS, SABORES, ADICIONAIS, BORDAS
 import csv
 
 pizza = Pizza('', [], '', '')
