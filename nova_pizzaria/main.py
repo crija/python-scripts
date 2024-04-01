@@ -80,4 +80,3 @@ with open("nova_pizzaria/arquivo.csv", 'a', newline='') as arquivo:
                         'numero': dados_cliente.numero,
                         'bairro': dados_cliente.bairro,
                     })
-    arquivo.close()
