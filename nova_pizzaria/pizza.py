@@ -24,7 +24,7 @@ class Pizza:
         valor_borda = BORDAS[self.borda]
         return valor_tamanho + valor_adicional + valor_borda
 
-class Dados_cliente:
+class Cliente:
     def __init__(self, rua, numero, bairro):
         self.rua = rua
         self.numero = numero
