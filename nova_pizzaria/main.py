@@ -1,9 +1,10 @@
-from pizza import Pizza, Cliente
+from client import Cliente
+from pizza import Pizza
 from constants import TAMANHOS, SABORES, ADICIONAIS, BORDAS
 import csv
 
 pizza = Pizza('', [], '', '')
-dados_cliente = Cliente('', 0, '')
+dados_cliente = Cliente('', '', '')
 
 print('Tamanho')
 for i in TAMANHOS.items():
@@ -57,7 +58,7 @@ else:
     rua = input('Rua: ')
     dados_cliente.definir_rua(rua)
 
-    numero_casa = int(input('Número da casa/ apartamento: '))
+    numero_casa = input('Número da casa/ apartamento: ')
     dados_cliente.definir_numero(numero_casa)
 
     bairro = input('Bairro: ')
@@ -76,5 +77,5 @@ with open("nova_pizzaria/arquivo.csv", 'a', newline='') as arquivo:
                         'borda': pizza.borda,
                         'adicional': pizza.adicional,
                         'total': pizza.valor_total(),
-                        'endereço': {'rua': dados_cliente.rua, 'numero': dados_cliente.numero_casa, 'bairro': dados_cliente.bairro}
+                        'endereço': {'rua': dados_cliente.rua, 'numero': dados_cliente.numero, 'bairro': dados_cliente.bairro}
                     })
