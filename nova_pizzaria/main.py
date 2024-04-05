@@ -76,5 +76,5 @@ with open("nova_pizzaria/arquivo.csv", 'a', newline='') as arquivo:
                         'borda': pizza.borda,
                         'adicional': pizza.adicional,
                         'total': pizza.valor_total(),
-                        'endereço': {'rua':rua, 'numero': numero_casa, 'bairro': bairro}
+                        'endereço': {'rua': dados_cliente.rua, 'numero': dados_cliente.numero_casa, 'bairro': dados_cliente.bairro}
                     })
