@@ -1,3 +1,8 @@
 tamanho;igredientes;borda;adicional;total;endereço
 p;['4 queijos', 'margarita'];catupiry;morango;51.13;{'rua': 'sao pedro', 'numero': 89, 'bairro': 'boa vista'}
 p;['brócolis', 'coração'];bombom;morango;56.04;{'rua': '', 'numero': '', 'bairro': ''}
+m;['prestigio', 'brigadeiro', 'sorvete'];bombom;morango;64.04;{'rua': '', 'numero': '', 'bairro': ''}
+g;['4 queijos', 'margarita', 'escarola', 'coração'];catupiry;maionese verde;69.48;{'rua': '', 'numero': '', 'bairro': ''}
+g;['frango', 'brigadeiro', 'vegetariana', 'chocolate preto'];bombom;chocolate preto;80.79;{'rua': 'pinheiros', 'numero': '2b', 'bairro': 'nevoeiro'}
+p;['brigadeiro', 'sorvete'];bombom;morango;56.04;{'rua': 'três coroas', 'numero': '86', 'bairro': 'sao luis'}
+p;['atum', 'toscana'];catupiry;maionese verde;48.48;{'rua': '', 'numero': '', 'bairro': ''}
