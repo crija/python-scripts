@@ -1,3 +1,6 @@
+# Import request to use a get method
+# Consult a API to find out the value of the dollar
+
 import requests
 import json
 
