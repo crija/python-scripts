@@ -146,7 +146,7 @@ aRJ = 775.67
 print('Digite o número da classe escolhida: ')
 viagem = int(input('- '))
 
-if viagem != 1 and viagem != 2 and viagem != 3 and viagem != 4 and viagem != 5 and viagem != 6 and viagem != 7 and viagem != 8 and viagem != 9 and viagem != 10 and viagem != 11 and viagem != 12 and viagem != 13 and viagem != 14 and  viagem != 15:
+if viagem < 1 or viagem > 15:
     print('OPS... Viagem não disponível ')
 
 
