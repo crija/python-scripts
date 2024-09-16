@@ -1,29 +1,27 @@
 import csv
 
-dados = []
+def test_register_name_and_gender(n, g):
+    dados = []
 
-nome = str(input('Informe seu nome: ')).upper()
-dados.append(nome)
+    g = g.upper()
 
-s = str(input('Informe seu sexo: [M/F] ')).strip().upper()
+    if g != 'F' and g != 'M':
+        return 'invalid gender'
+        
+    dados.append(n)
+    dados.append(g)
 
-while s not in 'MmFf':
+    with open("./arquivo.csv", 'a', newline='') as arquivo:
+        campos_head = ['name', 'gender']
+        writer = csv.DictWriter(arquivo, fieldnames=campos_head, delimiter=';')
 
-    s = str(input('Dados invalidos.Tente novamente: [F/M]'))
-dados.append(s)
-print(dados)
+        if arquivo.tell() == 0:
+            writer.writeheader()
 
-print('Dados registrados com sucesso')
+        writer.writerow({
+                            'name': n,
+                            'gender': g
+                        })
+        arquivo.close()
 
-with open("./arquivo.csv", 'a', newline='') as arquivo:
-    campos_head = ['nome', 's']
-    writer = csv.DictWriter(arquivo, fieldnames=campos_head, delimiter=';')
-
-    if arquivo.tell() == 0:
-        writer.writeheader()
-
-    writer.writerow({
-                        'nome': nome,
-                        's': s
-                    })
-    arquivo.close()
+test_register_name_and_gender('ana', 'f')
